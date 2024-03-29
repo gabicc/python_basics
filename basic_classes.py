@@ -41,3 +41,13 @@ class Tenis_de_masa(Sport):
     def get_max_sets(self):
         return self._sets * 2 - 1
 
+class Sah(Sport):
+    def __init__(self, time, effort, pieces_taken):
+        super().__init__(time, effort)
+        self._pieces_taken = pieces_taken
+
+    def take_piece(self):
+        self._pieces_taken = self._pieces_taken + 1
+
+    def get_taken(self):
+        return self._pieces_taken
